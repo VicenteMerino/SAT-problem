@@ -266,6 +266,7 @@ if __name__ == "__main__":
     PATH_TO_UNSAT_50 = "data/50props insatisfacibles/"
 
     print("Fuerza bruta:\n")
+    # 20 SAT
     for i in range(1, 21):
         time0 = time()
         print(f"SAT 20 - {i}")
@@ -276,6 +277,7 @@ if __name__ == "__main__":
 
     print("DPLL:\n")
     for i in range(1, 21):
+        # 20 SAT
         time0 = time()
         print(f"SAT 20 - {i}")
         formula, props = dimacs(f"{PATH_TO_SAT_20}uf20-0{i}.cnf")
@@ -283,7 +285,7 @@ if __name__ == "__main__":
         print(time() - time0)
     print("\n")
 
-    # # # # # #50 insatisfacibles
+    # 50 UNSAT
     for i in range(1, 11):
         time0 = time()
         print(f"UNSAT 50 -{i}")
@@ -292,7 +294,7 @@ if __name__ == "__main__":
         print(time() - time0)
     print("\n")
 
-    # # # #50 satisfacibles
+    # 50 SAT
     for i in range(1, 11):
         time0 = time()
         print(f"50 SAT {i}")
