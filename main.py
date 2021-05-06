@@ -272,7 +272,7 @@ if __name__ == "__main__":
         formula, props = dimacs(f"{PATH_TO_SAT_20}uf20-0{i}.cnf")
         fuerzabruta(formula, props)  # Agregar print para ver que es correcto
         print(time() - time0)
-        print("\n")
+    print("\n")
 
     print("DPLL:\n")
     for i in range(1, 21):
